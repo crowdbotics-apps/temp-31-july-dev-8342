@@ -23,6 +23,23 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
+    hgfhfhg = models.ManyToManyField(
+        "home.CustomText", blank=True, related_name="homepage_hgfhfhg",
+    )
+    hgfhgfghf = models.OneToOneField(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="homepage_hgfhgfghf",
+    )
+    hgfhgfh = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="homepage_hgfhgfh",
+    )
 
     @property
     def api(self):
